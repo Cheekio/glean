@@ -93,10 +93,12 @@ function clearFarmLocationChoices(){
 
 // This is the key code \\
 $(function() {
+    /*
    $("input[type='checkbox']").on("click", function(event){
 		clear_checkboxes();
 		$(event.target).prop("checked", true);
    });
+  */
    $('#id_farm').change(function(){
       var farm = $(this).children("option:selected").val();
       if (farm != "") {
