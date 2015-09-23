@@ -16,11 +16,11 @@ from crispy_forms.layout import (Layout,
 from counties.models import County
 from gleanevent.models import GleanEvent
 from constants import STATES, TIME_OF_DAY
-from generic.forms import County_For_Forms
+from generic.forms import Counties_For_Forms
 from django.contrib.auth.models import User, Group
 
 
-class GleanForm(County_For_Forms, forms.ModelForm):
+class GleanForm(Counties_For_Forms, forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(GleanForm, self).__init__(*args, **kwargs)
@@ -55,7 +55,6 @@ class GleanForm(County_For_Forms, forms.ModelForm):
         )
         if self.instance:
             glean = self.instance
-            self.county_initialize(glean)
 
     time_of_day = forms.ChoiceField(label="&nbsp;",
                                     choices=TIME_OF_DAY,

@@ -79,6 +79,7 @@ class NewGlean(generic.CreateView):
     def form_valid(self, form):
         user = self.request.user
         self.object = form.save(commit=False)
+        self.object.save()
         self.object.member_organization = user.profile.member_organization
         self.object.created_by = user
         self.object.save()
