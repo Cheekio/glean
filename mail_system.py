@@ -10,6 +10,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.template.base import Template as T, Context
 from django.utils.text import slugify
+from django.conf import settings
 
 from functions import primary_source
 
@@ -53,7 +54,7 @@ def mail_from_source(announcement):
 
         from_address = "{name} <{email}>".format(
             name=mo.name,
-            email="info@vermontgleaningcollective.org"
+            email=settings.ANNOUNCEMENT_FROM_EMAIL
         )
 
         if announcement.title:
