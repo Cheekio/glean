@@ -51,9 +51,10 @@ def mail_from_source(announcement):
         mo = announcement.member_organization
         glean = announcement.glean
 
-        from_address = slugify(
-            unicode(mo)
-        ) + "@vermontgleaningcollective.org"
+        from_address = "{name} <{email}>".format(
+            name=unicode(mo),
+            email="info@vermontgleaningcollective.org"
+        )
 
         if announcement.title:
             subject = announcement.title
