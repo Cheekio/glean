@@ -52,7 +52,7 @@ def mail_from_source(announcement):
         glean = announcement.glean
 
         from_address = "{name} <{email}>".format(
-            name=unicode(mo),
+            name=mo.name,
             email="info@vermontgleaningcollective.org"
         )
 
