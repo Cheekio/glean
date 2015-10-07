@@ -75,6 +75,7 @@ class Distro(models.Model):
         ('Seeds', 'Seeds'),
         ('Spinach', 'Spinach'),
         ('Sprouts', 'Sprouts'),
+        ('Strawberries', 'Strawberries'),
         ('Sweet Potatoes', 'Sweet Potatoes'),
         ('Summer Sq./Zucchini', 'Summer Sq./Zucchini'),
         ('Tomatillos', 'Tomatillos'),
